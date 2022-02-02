@@ -19,4 +19,4 @@ const p = document.createElement("p");
 
  /** Start Up */
 
- document.addEventListener("DOMCOntentLoaded",)
+ document.addEventListener("DOMCOntentLoaded", functiongoeshere);
