@@ -29,7 +29,8 @@ const onLoad  = () => {
     
 
     h1.innerText = "Matches: ";
-    p.innerText = "Instructions on how to play go here";
+    h2.innerText = "Timer";
+    p.innerText = "Instructions on how to play go here dfadsf";
 
     mainDiv().appendChild(h1);
     mainDiv().appendChild(p);
