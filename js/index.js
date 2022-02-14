@@ -1,7 +1,5 @@
 
 //Selects Elements
-
-
 const matchSection = document.querySelector("section");
 const matchesCount = document.querySelector("span");
 
@@ -32,7 +30,6 @@ const getData = () => [      // without curly brace, it automatically returns
 ];
 
 //Need to Randomize cards
-
 const randomize = () => {
     const cardData = getData();
     cardData.sort(() => Math.random() - 0.5);
@@ -40,13 +37,12 @@ const randomize = () => {
 }
 
 //Generates Cards (shuffled)
-
 const cardGenerator = () => {
-    const cardData = randomize();
+    const cardData = randomize();           //sets card data to randomize
 
+    //Creates HTML
     cardData.forEach(item => {
-
-        const card = document.createElement("div");
+      const card = document.createElement("div");
         const face = document.createElement("img");
         const back = document.createElement("img");
         
@@ -54,6 +50,11 @@ const cardGenerator = () => {
         face.classList = 'face';
         back.classList = 'back';
 
+        //Attaches info to cards
+        face.src = item.imgSrc;
+        back.src = item.imgSrc;
+
+        //Attaches cards to section
         matchSection.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
