@@ -46,6 +46,10 @@ section{
   backface-visibility: hidden;
 }
 
+.toggleCard{
+    transform: rotateY(180deg);
+}
+
 .nav-wrapper-container{
    padding-left: 4rem;
    padding-right: 14rem;
