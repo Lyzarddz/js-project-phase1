@@ -10,7 +10,7 @@ const matches = 0;
 matchesCount.textContent = matches;
 
 // Gets Data 
-const getData = () => [      // without curly brace, it automatically returns
+const getData = () => [      // without curly brace, it automatically returns  
 {imgSrc: "images/kit.jpeg", name: "Kit"},
 {imgSrc: "images/Pixel.jpeg", name: "Pixel"},
 {imgSrc: "images/Salvador.jpeg", name: "Salvador"},
@@ -43,21 +43,18 @@ const cardGenerator = () => {
     //Creates HTML
     cardData.forEach(item => {
       const card = document.createElement("div");
-        const face = document.createElement("img");
-        const back = document.createElement("img");
+      const face = document.createElement("img");
         
         card.classList = 'card';
         face.classList = 'face';
-        back.classList = 'back';
 
         //Attaches info to cards
-        face.src = item.imgSrc;
-        back.src = item.imgSrc;
+        face.src = item.imgSrc;       //accessing img property via item
+
 
         //Attaches cards to section
         matchSection.appendChild(card);
         card.appendChild(face);
-        card.appendChild(back);
     });
 };
 cardGenerator();
