@@ -18,8 +18,8 @@ body{
 
 section{
     display: grid;
-    grid-template-columns: repeat(4, 11rem);    /*Creates 4 rows and 8 columns */
-    grid-template-rows: repeat(4, 11rem);
+    grid-template-columns: repeat(4, 12rem);    /*Creates 4 rows and 8 columns */
+    grid-template-rows: repeat(4, 12rem);
     grid-gap: 2rem;
     cursor: pointer;
     perspective: 800px;
@@ -50,5 +50,7 @@ section{
 }
 
 h1{
-    text-decoration: white;
+    color: white;
+    font-size: 40px;
+    padding-right: 80rem;
 }
