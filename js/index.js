@@ -44,17 +44,21 @@ const cardGenerator = () => {
     cardData.forEach(item => {
       const card = document.createElement("div");
       const face = document.createElement("img");
+      const back = document.createElement("div")
         
         card.classList = 'card';
         face.classList = 'face';
+        back.classList = 'back';
 
         //Attaches info to cards
         face.src = item.imgSrc;       //accessing img property via item
+        back.src = item.imgSrc;
 
 
         //Attaches cards to section
         matchSection.appendChild(card);
         card.appendChild(face);
+        card.appendChild(back);
     });
 };
 cardGenerator();
