@@ -8,7 +8,7 @@ const matchesCount = document.querySelector("span");
 const matches = 0;
 
 
-// Links matches to match count span
+// Links matches to matchCount 
 matchesCount.textContent = matches;
 
 // Gets Data 
@@ -31,10 +31,21 @@ const getData = () => [      // without curly brace, it automatically returns
 {imgSrc: "images/Jenny.jpg", name: "Jenny"}
 ];
 
+//Need to Randomize cards
 
+const randomize = () => {
+    const cardData = getData();
+    cardData.sort(() => Math.random() - 0.5);
+    return cardData;
+}
 
+//Generates Cards (shuffled)
 
+const cardGenerator = () => {
+    const cardData = randomize();
+    const card = document.createElement('div');
+    
 
-
-
+}
+cardGenerator();
 
