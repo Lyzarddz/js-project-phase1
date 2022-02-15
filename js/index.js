@@ -78,12 +78,20 @@ const checkCards = (e) => {
     if(flippedCards.length === 2){
         if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')){
             console.log('match');
-        } else{
+            flippedCards.forEach(card => {         //flips cards back if wrong, and keeps up
+                card.classList.remove('flipped');
+                card.style.pointerEvents = 'none';
+            })
+        } else {
             console.log('wrong');
+            flippedCards.forEach(card => {
+                
+            card.classList.remove('flipped');      //removes flipped after second card is selected
+            setTimeout(() => card.classList.remove("toggleCard"), 1400);
+            })
         }
-}
-
-}
+    }
+};
 cardGenerator();
 
 
