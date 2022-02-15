@@ -3,6 +3,9 @@
 const matchSection = document.querySelector("section");
 const matchesCount = document.querySelector("span");
 
+const startBtn = document.getElementById("start-btn");
+
+
 let matches = 0;
 
 
@@ -94,6 +97,22 @@ const checkCards = (e) => {
         }
     }
 };
+
+//To Restart Game
+
+    const resetBtn = document.getElementById("restart-btn");
+    resetBtn.addEventListener("click",refreshPage);
+
+
+    function refreshPage() {
+        if (confirm("Are you sure, want to refresh?")) {
+            location.reload();
+        }
+    }
+
+
+
 cardGenerator();
+
 
 
