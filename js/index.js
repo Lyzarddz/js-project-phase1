@@ -3,7 +3,7 @@
 const matchSection = document.querySelector("section");
 const matchesCount = document.querySelector("span");
 
-const matches = 0;
+let matches = 0;
 
 
 // Links matches to matchCount 
@@ -81,13 +81,15 @@ const checkCards = (e) => {
             flippedCards.forEach(card => {         //flips cards back if wrong, and keeps up
                 card.classList.remove('flipped');
                 card.style.pointerEvents = 'none';
-            })
+            });
+            matches++;                               //increments matches when correct
+            matchesCount.textContent = matches;
         } else {
             console.log('wrong');
             flippedCards.forEach(card => {
                 
             card.classList.remove('flipped');      //removes flipped after second card is selected
-            setTimeout(() => card.classList.remove("toggleCard"), 1400);
+            setTimeout(() => card.classList.remove("toggleCard"), 1100);
             })
         }
     }
