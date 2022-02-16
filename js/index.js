@@ -8,7 +8,6 @@ const startBtn = document.getElementById("start-btn");
 
 let matches = 0;
 
-
 // Links matches to matchCount 
 matchesCount.textContent = matches;
 
@@ -70,8 +69,9 @@ const cardGenerator = () => {
         })
     });
 };
-//Checks card for matches
 
+
+//Checks card for matches
 const checkCards = (e) => {
     const clickedCard = e.target;
     clickedCard.classList.add('flipped');     // has to be put before grabbing elements 
@@ -98,6 +98,30 @@ const checkCards = (e) => {
     }
 };
 
+
+//Timer
+
+let second = 0, minute = 0;
+let timer = document.querySelector(".timer");
+let interval;
+
+const startTimer = () => {
+        interval = setInterval(() => {
+        timer.textContent = minute + "mins " + second + "secs";
+        second ++;
+
+        if (second === 60){
+            minute++;
+            second = 0;
+        }
+
+        if (minute === 60){
+            hour++;
+            minute = 0;
+        }
+    }, 1000);
+}
+startTimer();
 //To Restart Game
 
     const resetBtn = document.getElementById("restart-btn");
@@ -105,14 +129,14 @@ const checkCards = (e) => {
 
 
     function refreshPage() {
-        if (confirm("Are you sure, want to refresh?")) {
-            location.reload();
+        if (confirm("Are you sure you want to restart the game?")) {
+            location.reload();                                  //reloads current URL
         }
     }
 
 
-
 cardGenerator();
+  
 
 
-
+  
