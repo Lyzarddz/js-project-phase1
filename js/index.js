@@ -3,13 +3,12 @@
 const matchSection = document.querySelector("section");
 const matchesCount = document.querySelector("span");
 
-const startBtn = document.getElementById("start-btn");
-
 
 let matches = 0;
 
 // Links matches to matchCount 
 matchesCount.textContent = matches;
+
 
 // Gets Data 
 const getData = () => [      // without curly brace, it automatically returns  
@@ -121,7 +120,15 @@ const startTimer = () => {
         }
     }, 1000);
 }
-startTimer();
+
+
+
+//Starts Game
+
+const startBtn = document.getElementById("start-btn");
+startBtn.addEventListener("click", startTimer);
+
+
 //To Restart Game
 
     const resetBtn = document.getElementById("restart-btn");
@@ -133,6 +140,9 @@ startTimer();
             location.reload();                                  //reloads current URL
         }
     }
+
+
+
 
 
 cardGenerator();
