@@ -121,13 +121,13 @@ const startTimer = () => {
     }, 1000);
 }
 
-
-
 //Starts Game
 
 const startBtn = document.getElementById("start-btn");
-startBtn.addEventListener("click", startTimer);
-
+startBtn.addEventListener("click", () => {
+    cardGenerator();
+    startTimer();
+});
 
 //To Restart Game
 
@@ -146,16 +146,14 @@ const pauseBtn = document.getElementById("pause-btn");
 pauseBtn.addEventListener("click", pauseGame);
 
 function pauseGame() {
-
     alert("Press Ok to Resume Game");
-
 }
 
 
 
 
 
-cardGenerator();
+// cardGenerator();
   
 
 
