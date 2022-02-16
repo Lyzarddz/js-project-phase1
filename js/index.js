@@ -141,6 +141,16 @@ startBtn.addEventListener("click", startTimer);
         }
     }
 
+//Pauses Game
+const pauseBtn = document.getElementById("pause-btn");
+pauseBtn.addEventListener("click", pauseGame);
+
+function pauseGame() {
+
+    alert("Press Ok to Resume Game");
+
+}
+
 
 
 
