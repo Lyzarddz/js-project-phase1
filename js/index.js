@@ -110,6 +110,11 @@ window.onload = ()=>{
     });
 }
 
+close.addEventListener("click", ()=> {
+    popUp.style.display = "none";
+})
+
+
 
 
 
