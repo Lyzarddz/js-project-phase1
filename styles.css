@@ -29,7 +29,7 @@ section{
     position: relative; 
     transform-style: preserve-3d;
     transition: transform 2s ease;
-    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+    box-shadow: rgba(0,0,0,0.2) 5px 10px 15px;
    
 }
 

@@ -151,9 +151,6 @@ function pauseGame() {
 
 
 
-
-
-// cardGenerator();
   
 
 
