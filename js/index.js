@@ -98,6 +98,10 @@ const checkCards = (e) => {
 };
 
 
+// On Load pop up instructions
+
+
+
 //Timer
 
 let second = 0, minute = 0;
@@ -149,6 +153,14 @@ function pauseGame() {
     alert("Press Ok to Resume Game");
 }
 
+
+window.addEventListener("DOMContentLoaded", ()=>{
+    alert("here is how you play");
+})
+
+
+// End of game Modal
+// const modal = document.createElement
 
 
   

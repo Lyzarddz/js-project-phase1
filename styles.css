@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: fantasy, Papyrus;
+    font-weight: bold;
 }
 
 body{
@@ -56,16 +58,38 @@ section{
    padding-right: 14rem;
 }
 
+#game-title{
+    font-size: 35px;
+}
+
+
+
+#start-btn{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+
+#restart-btn{
+    font-size: 42px;
+   font-weight: normal;
+}
+
+#pause-btn{
+    font-size: 20px;
+   font-weight: bolder;
+}
+
 h1{
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     padding-right: 80rem;
 }
 
 h2{
 padding-top: 3.5rem;
  color: white;
- font-size: 40px;
+ font-size: 48px;
  text-align: center;
  font-weight: bold;
 
