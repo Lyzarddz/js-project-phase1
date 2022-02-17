@@ -102,6 +102,7 @@ const checkCards = (e) => {
 
 
 
+
 //Timer
 
 let second = 0, minute = 0;
@@ -154,13 +155,7 @@ function pauseGame() {
 }
 
 
-window.addEventListener("DOMContentLoaded", ()=>{
-    alert("here is how you play");
-})
 
-
-// End of game Modal
-// const modal = document.createElement
 
 
   

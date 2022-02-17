@@ -94,3 +94,49 @@ padding-top: 3.5rem;
  font-weight: bold;
 
 }
+
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+ }
+ 
+ .contentBox{
+     position: relative;
+     width: 600px;
+     height: 400px;
+     background: whitesmoke;
+     border-radius: 20px;
+     display: flex;
+     box-shadow: rgba(0,0,0,0.2) 5px 10px 15px;
+ }
+
+h3{
+     padding-left: 8rem;
+     font-weight: bolder;
+
+ }
+
+ p{
+     text-align: center;
+     font-size: 28px;
+ }
+
+ .close{
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     width: 40px;
+     height: 40px;
+     background: url(images/close-button-png-30231.png);
+     background-repeat: no-repeat;
+     background-size: 10px;
+     background-position: center;
+     cursor: pointer;
+     border-radius: 50%;
+     z-index: 10;
+ }
+
+
