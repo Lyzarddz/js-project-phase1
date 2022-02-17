@@ -101,6 +101,7 @@ padding-top: 3.5rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -70%);
+    display: none;
  }
  
  .contentBox{
@@ -132,11 +133,6 @@ h3{
      height: 40px;
      background: url(images/close-button-png-30231.png);
      background-repeat: no-repeat;
-     background-size: 10px;
-     background-position: center;
-     cursor: pointer;
-     border-radius: 50%;
-     z-index: 10;
- }
-
+     background-size: 40px;
+ }  
 

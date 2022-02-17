@@ -100,6 +100,16 @@ const checkCards = (e) => {
 
 // On Load pop up instructions
 
+const popUp = document.querySelector('.popup');
+const close = document.querySelector('.close');
+
+window.onload = ()=>{
+    setTimeout(()=>{
+        popUp.style.display = "block";
+
+    });
+}
+
 
 
 
