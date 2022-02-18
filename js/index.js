@@ -75,6 +75,7 @@ const checkCards = (e) => {
     const clickedCard = e.target;
     clickedCard.classList.add('flipped');     // has to be put before grabbing elements 
     const flippedCards = document.querySelectorAll('.flipped');
+    const toggleCard = document.querySelectorAll('.toggleCard');
     
 
     if(flippedCards.length === 2){
@@ -92,9 +93,15 @@ const checkCards = (e) => {
                 
             card.classList.remove('flipped');      //removes flipped after second card is selected
             setTimeout(() => card.classList.remove("toggleCard"), 1100);
-            })
+            });
+
         }
     }
+    //Condition for winning 
+    if(toggleCard.length == 16){
+        alert("Congrats, You won!");
+    }
+
 };
 
 
@@ -106,16 +113,12 @@ const close = document.querySelector('.close');
 window.onload = ()=>{
     setTimeout(()=>{
         popUp.style.display = "block";
-
     });
 }
 
 close.addEventListener("click", ()=> {
     popUp.style.display = "none";
 })
-
-
-
 
 
 //Timer
@@ -134,12 +137,16 @@ const startTimer = () => {
             second = 0;
         }
 
-        if (minute === 60){
-            hour++;
-            minute = 0;
+        if (minute === 1 && second === 2){
+        alert("You Lost, Try Again!");
+        location.reload();
+            
         }
-    }, 1000);
+    },1000);
+
 }
+
+
 
 //Starts Game
 
@@ -152,7 +159,7 @@ startBtn.addEventListener("click", () => {
 //To Restart Game
 
     const resetBtn = document.getElementById("restart-btn");
-    resetBtn.addEventListener("click",refreshPage);
+    resetBtn.addEventListener("click", refreshPage);
 
 
     function refreshPage() {
@@ -168,6 +175,16 @@ pauseBtn.addEventListener("click", pauseGame);
 function pauseGame() {
     alert("Press Ok to Resume Game");
 }
+
+
+
+// const endPopUp = ()=> {
+    
+//     if(toggleCard.length === 2){
+//         alert("You won");
+//     }
+// }
+    
 
 
 
