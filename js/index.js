@@ -98,8 +98,9 @@ const checkCards = (e) => {
         }
     }
     //Condition for winning 
-    if(toggleCard.length == 16){
+    if(toggleCard.length === 16){
         alert("Congrats, You won!");
+        location.reload();
     }
 
 };
@@ -164,7 +165,7 @@ startBtn.addEventListener("click", () => {
 
     function refreshPage() {
         if (confirm("Are you sure you want to restart the game?")) {
-            location.reload();                                  //reloads current URL
+            location.reload();                                  
         }
     }
 
@@ -176,14 +177,6 @@ function pauseGame() {
     alert("Press Ok to Resume Game");
 }
 
-
-
-// const endPopUp = ()=> {
-    
-//     if(toggleCard.length === 2){
-//         alert("You won");
-//     }
-// }
     
 
 
