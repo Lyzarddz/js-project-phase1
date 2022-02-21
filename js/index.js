@@ -97,7 +97,7 @@ const checkCards = (e) => {
 
         }
     }
-    //Condition for winning 
+    // Condition for winning 
     if(toggleCard.length === 16){
         alert("Congrats, You won!");
         location.reload();
