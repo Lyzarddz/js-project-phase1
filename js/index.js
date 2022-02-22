@@ -1,4 +1,8 @@
 
+const baseUrl = 'http://localhost:3000';
+let cards = [];
+
+
 //Selects Elements
 const matchSection = document.querySelector("section");
 const matchesCount = document.querySelector("span");
@@ -11,28 +15,41 @@ matchesCount.textContent = matches;
 
 
 // Gets Data 
-const getData = () => [      // without curly brace, it automatically returns  
-{imgSrc: "images/kit.jpeg", name: "Kit"},
-{imgSrc: "images/Pixel.jpeg", name: "Pixel"},
-{imgSrc: "images/Salvador.jpeg", name: "Salvador"},
-{imgSrc: "images/Tongo.jpeg", name: "Tongo"},
-{imgSrc: "images/Voltaire 8.jpeg", name: "Voltaire"},
-{imgSrc: "images/Zion.jpeg", name: "Zion"},
-{imgSrc: "images/Yadda.jpg", name: "Yadda"},
-{imgSrc: "images/Jenny.jpg", name: "Jenny"},
-{imgSrc: "images/kit.jpeg", name: "Kit"},
-{imgSrc: "images/Pixel.jpeg", name: "Pixel"},
-{imgSrc: "images/Salvador.jpeg", name: "Salvador"},
-{imgSrc: "images/Tongo.jpeg", name: "Tongo"},
-{imgSrc: "images/Voltaire 8.jpeg", name: "Voltaire"},
-{imgSrc: "images/Zion.jpeg", name: "Zion"},
-{imgSrc: "images/Yadda.jpg", name: "Yadda"},
-{imgSrc: "images/Jenny.jpg", name: "Jenny"}
-];
+// const getData = () => [      
+// {imgSrc: "images/kit.jpeg", name: "Kit"},
+// {imgSrc: "images/Pixel.jpeg", name: "Pixel"},
+// {imgSrc: "images/Salvador.jpeg", name: "Salvador"},
+// {imgSrc: "images/Tongo.jpeg", name: "Tongo"},
+// {imgSrc: "images/Voltaire 8.jpeg", name: "Voltaire"},
+// {imgSrc: "images/Zion.jpeg", name: "Zion"},
+// {imgSrc: "images/Yadda.jpg", name: "Yadda"},
+// {imgSrc: "images/Jenny.jpg", name: "Jenny"},
+// {imgSrc: "images/kit.jpeg", name: "Kit"},
+// {imgSrc: "images/Pixel.jpeg", name: "Pixel"},
+// {imgSrc: "images/Salvador.jpeg", name: "Salvador"},
+// {imgSrc: "images/Tongo.jpeg", name: "Tongo"},
+// {imgSrc: "images/Voltaire 8.jpeg", name: "Voltaire"},
+// {imgSrc: "images/Zion.jpeg", name: "Zion"},
+// {imgSrc: "images/Yadda.jpg", name: "Yadda"},
+// {imgSrc: "images/Jenny.jpg", name: "Jenny"}
+// ];
+
+const fetchCards = ()=> {
+    fetch(baseUrl + "/cards")
+    .then(resp => resp.json())
+    .then(data => {
+        cards = data;
+    })
+}
+
+document.addEventListener('DOMContentLoaded', ()=> {
+    fetchCards();
+})
+
 
 //Need to Randomize cards
 const randomize = () => {
-    const cardData = getData();
+    const cardData = cards;
     cardData.sort(() => Math.random() - 0.5);
     return cardData;
 }
@@ -52,7 +69,7 @@ const cardGenerator = () => {
         back.classList = 'back';
 
         //Attaches info to cards
-        face.src = item.imgSrc;       //accessing img property via item
+        face.src = item.imageSrc;       //accessing img property via item
         card.setAttribute('name', item.name);         //attaches image name
 
 

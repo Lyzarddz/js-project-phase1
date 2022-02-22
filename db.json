@@ -1,0 +1,85 @@
+{
+"cards": [
+    {
+        "id": 1,
+        "name": "Jenny",
+        "imageSrc": "images/Jenny.jpg"  
+    },
+    {
+        "id": 2,
+        "name": "Pixel",
+        "imageSrc": "images/Pixel.jpeg"  
+    },
+    {
+        "id": 3,
+        "name": "Kit",
+        "imageSrc": "images/kit.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Salvador",
+        "imageSrc": "images/Salvador.jpeg"  
+    },
+    {
+        "id": 5,
+        "name": "Tongo",
+        "imageSrc": "images/Tongo.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Voltaire",
+        "imageSrc": "images/Voltaire 8.jpeg"  
+    },
+    {
+        "id": 7,
+        "name": "Zion",
+        "imageSrc": "images/Zion.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Yadda",
+        "imageSrc": "images/Yadda.jpg"  
+    },
+    {
+        "id": 1,
+        "name": "Jenny",
+        "imageSrc": "images/Jenny.jpg"  
+    },
+    {
+        "id": 2,
+        "name": "Pixel",
+        "imageSrc": "images/Pixel.jpeg"  
+    },
+    {
+        "id": 3,
+        "name": "Kit",
+        "imageSrc": "images/kit.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Salvador",
+        "imageSrc": "images/Salvador.jpeg"  
+    },
+    {
+        "id": 5,
+        "name": "Tongo",
+        "imageSrc": "images/Tongo.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Voltaire",
+        "imageSrc": "images/Voltaire 8.jpeg"  
+    },
+    {
+        "id": 7,
+        "name": "Zion",
+        "imageSrc": "images/Zion.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Yadda",
+        "imageSrc": "images/Yadda.jpg"  
+    }
+]
+}
+
