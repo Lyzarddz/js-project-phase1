@@ -3,6 +3,26 @@
   
   Memory Petting Zoo is an interactive Javascript memory game that is great for helping people to develop the skills to pay attention to detail and to help improve visual recognition
 
+  ## How to Launch with VS Code
+
+Follow the link to https://github.com/Lyzarddz/js-project-phase1
+
+Click the arrow next to the green "Code" button and and copy the SSH file to your clipboard
+
+Open a new terminal and type "git clone" and paste link directly after
+
+Type "ls" in terminal for directory list, you can change directory by typing "cd js-project-phase1".
+
+Type "code ." to open in VS Code
+
+After opening in VS Code, type "npm install -g json-server" 
+
+You then type "json-server --watch db.json" 
+
+Lastly, right click on the index.html to "Open with Live Server"
+
+
+
 
 
   ## Description

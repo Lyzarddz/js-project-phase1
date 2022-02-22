@@ -14,26 +14,6 @@ let matches = 0;
 matchesCount.textContent = matches;
 
 
-// Gets Data 
-// const getData = () => [      
-// {imgSrc: "images/kit.jpeg", name: "Kit"},
-// {imgSrc: "images/Pixel.jpeg", name: "Pixel"},
-// {imgSrc: "images/Salvador.jpeg", name: "Salvador"},
-// {imgSrc: "images/Tongo.jpeg", name: "Tongo"},
-// {imgSrc: "images/Voltaire 8.jpeg", name: "Voltaire"},
-// {imgSrc: "images/Zion.jpeg", name: "Zion"},
-// {imgSrc: "images/Yadda.jpg", name: "Yadda"},
-// {imgSrc: "images/Jenny.jpg", name: "Jenny"},
-// {imgSrc: "images/kit.jpeg", name: "Kit"},
-// {imgSrc: "images/Pixel.jpeg", name: "Pixel"},
-// {imgSrc: "images/Salvador.jpeg", name: "Salvador"},
-// {imgSrc: "images/Tongo.jpeg", name: "Tongo"},
-// {imgSrc: "images/Voltaire 8.jpeg", name: "Voltaire"},
-// {imgSrc: "images/Zion.jpeg", name: "Zion"},
-// {imgSrc: "images/Yadda.jpg", name: "Yadda"},
-// {imgSrc: "images/Jenny.jpg", name: "Jenny"}
-// ];
-
 const fetchCards = ()=> {
     fetch(baseUrl + "/cards")
     .then(resp => resp.json())
