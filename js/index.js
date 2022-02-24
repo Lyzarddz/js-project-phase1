@@ -10,6 +10,7 @@ const close = document.querySelector('.close');
 
 window.onload = ()=>{
         popUp.style.display = "block";
+        
 }
 
 close.addEventListener("click", ()=> {
@@ -41,7 +42,7 @@ const startTimer = () => {
             minute++;
             second = 0;
         }
-
+        //condition for losing
         if (minute === 1 && second === 2){
         alert("You Lost, Try Again!");
         location.reload();
@@ -73,7 +74,7 @@ function pauseGame() {
 
  
 //Selects Elements
-const matchSection = document.querySelector("section");
+const section = document.querySelector("section");
 const matchesCount = document.querySelector("span");
 
 
@@ -124,7 +125,7 @@ const cardGenerator = () => {
 
 
         //Attaches cards to section
-        matchSection.appendChild(card);
+        section.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
 
@@ -139,7 +140,7 @@ const cardGenerator = () => {
 //Checks card for matches
 const checkCards = (e) => { 
     const clickedCard = e.target;
-    clickedCard.classList.add('flipped');     // has to be put before grabbing elements 
+    clickedCard.classList.add('flipped');     
 
     const flippedCards = document.querySelectorAll('.flipped');
     const toggleCard = document.querySelectorAll('.toggleCard');
@@ -157,8 +158,7 @@ const checkCards = (e) => {
            
         } else {
             console.log('wrong');
-            flippedCards.forEach(card => {
-                
+            flippedCards.forEach(card => {  
             card.classList.remove('flipped');      //removes flipped after second card is selected
             setTimeout(() => card.classList.remove("toggleCard"), 1100);
             });
