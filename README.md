@@ -3,6 +3,8 @@
   
   Memory Petting Zoo is an interactive Javascript memory game that is great for helping people to develop the skills to pay attention to detail and to help improve visual recognition
 
+  
+
   ## How to Launch with VS Code
 
 Follow the link to https://github.com/Lyzarddz/js-project-phase1

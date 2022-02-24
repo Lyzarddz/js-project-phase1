@@ -1,5 +1,5 @@
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'http://localhost:3000';     // for Json server
 let cards = [];
 
 
@@ -68,9 +68,10 @@ const cardGenerator = () => {
 
 
 //Checks card for matches
-const checkCards = (e) => {
+const checkCards = (e) => { 
     const clickedCard = e.target;
     clickedCard.classList.add('flipped');     // has to be put before grabbing elements 
+
     const flippedCards = document.querySelectorAll('.flipped');
     const toggleCard = document.querySelectorAll('.toggleCard');
     
@@ -78,12 +79,13 @@ const checkCards = (e) => {
     if(flippedCards.length === 2){
         if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')){
             console.log('match');
-            flippedCards.forEach(card => {         //flips cards back if wrong, and keeps up
+            flippedCards.forEach(card => {         //flips cards back if wrong, and keeps up if correct
                 card.classList.remove('flipped');
                 card.style.pointerEvents = 'none';
             });
-            matches++;                               //increments matches when correct
-            matchesCount.textContent = matches;
+            matches++;
+            matchesCount.textContent = matches;            //increments matches when correct
+           
         } else {
             console.log('wrong');
             flippedCards.forEach(card => {
@@ -95,11 +97,10 @@ const checkCards = (e) => {
         }
     }
     // Condition for winning 
-    if(toggleCard.length === 16){
-        alert("Congrats, You won!");
-        location.reload();
-    }
-
+        if(toggleCard.length === 16){
+            alert("Congrats, You won!");
+            location.reload();
+        }
 };
 
 
@@ -109,9 +110,7 @@ const popUp = document.querySelector('.popup');
 const close = document.querySelector('.close');
 
 window.onload = ()=>{
-    setTimeout(()=>{
         popUp.style.display = "block";
-    });
 }
 
 close.addEventListener("click", ()=> {
