@@ -3,6 +3,75 @@ const baseUrl = 'http://localhost:3000';     // for Json server
 let cards = [];
 
 
+// On Load pop up instructions
+
+const popUp = document.querySelector('.popup');
+const close = document.querySelector('.close');
+
+window.onload = ()=>{
+        popUp.style.display = "block";
+}
+
+close.addEventListener("click", ()=> {
+    popUp.style.display = "none";
+})
+
+
+
+//Starts Game
+
+const startBtn = document.getElementById("start-btn");
+startBtn.addEventListener("click", () => {
+    cardGenerator();
+    startTimer();
+});
+
+//Timer
+
+let second = 0, minute = 0;
+let timer = document.querySelector(".timer");
+let interval;
+
+const startTimer = () => {
+        interval = setInterval(() => {
+        timer.textContent = minute + "mins " + second + "secs";
+        second ++;
+
+        if (second === 60){
+            minute++;
+            second = 0;
+        }
+
+        if (minute === 1 && second === 2){
+        alert("You Lost, Try Again!");
+        location.reload();
+            
+        }
+    },1000);
+
+}
+
+//To Restart Game
+
+    const resetBtn = document.getElementById("restart-btn");
+    resetBtn.addEventListener("click", refreshPage);
+
+
+    function refreshPage() {
+        if (confirm("Are you sure you want to restart the game?")) {
+            location.reload();                                  
+        }
+    }
+
+//Pauses Game
+const pauseBtn = document.getElementById("pause-btn");
+pauseBtn.addEventListener("click", pauseGame);
+
+function pauseGame() {
+    alert("Press Ok to Resume Game");
+}
+
+ 
 //Selects Elements
 const matchSection = document.querySelector("section");
 const matchesCount = document.querySelector("span");
@@ -104,74 +173,9 @@ const checkCards = (e) => {
 };
 
 
-// On Load pop up instructions
-
-const popUp = document.querySelector('.popup');
-const close = document.querySelector('.close');
-
-window.onload = ()=>{
-        popUp.style.display = "block";
-}
-
-close.addEventListener("click", ()=> {
-    popUp.style.display = "none";
-})
-
-
-//Timer
-
-let second = 0, minute = 0;
-let timer = document.querySelector(".timer");
-let interval;
-
-const startTimer = () => {
-        interval = setInterval(() => {
-        timer.textContent = minute + "mins " + second + "secs";
-        second ++;
-
-        if (second === 60){
-            minute++;
-            second = 0;
-        }
-
-        if (minute === 1 && second === 2){
-        alert("You Lost, Try Again!");
-        location.reload();
-            
-        }
-    },1000);
-
-}
 
 
 
-//Starts Game
-
-const startBtn = document.getElementById("start-btn");
-startBtn.addEventListener("click", () => {
-    cardGenerator();
-    startTimer();
-});
-
-//To Restart Game
-
-    const resetBtn = document.getElementById("restart-btn");
-    resetBtn.addEventListener("click", refreshPage);
-
-
-    function refreshPage() {
-        if (confirm("Are you sure you want to restart the game?")) {
-            location.reload();                                  
-        }
-    }
-
-//Pauses Game
-const pauseBtn = document.getElementById("pause-btn");
-pauseBtn.addEventListener("click", pauseGame);
-
-function pauseGame() {
-    alert("Press Ok to Resume Game");
-}
 
     
 
