@@ -8,7 +8,7 @@
 }
 
 body{
-    height: 100vh;
+    /* height: 100vh; */
     background: rgb(32,171,147);
     background: linear-gradient(90deg, rgba(32,171,147,1) 0%, rgba(37,120,145,1) 35%, rgba(198,164,203,0.3799894957983193) 100%);
     display: flex;
@@ -27,7 +27,7 @@ section{
     cursor: pointer; 
 }
 
-.card{
+.card{ 
     position: relative; 
     transform-style: preserve-3d;
     transition: transform 2s ease;
