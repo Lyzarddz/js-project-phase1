@@ -33,13 +33,13 @@ Lastly, right click on the index.html to "Open with Live Server"
 
   "Start Game" button populates the game board with the cards and starts the timer. Player then has one minute to complete all 8 matches. Card pictures consist of adorable animals. If player is hovering on cards, the cursor changes to a hand to mimic petting the animals. 
 
-  Player has the option to Restart game at anytime which will cause a screen reload and bring player back to the "Game Instructions"
+  Player has the option to Restart game at anytime which will bring player back to the start of the game.
 
   Player has the option to Pause game at anytime which will cause an alert window to pop up that says "Press Ok to Resume Game". Game will begin back where it left off at.
   
-  If player does not complete matches within one minute, an alert window will pop up stating "You Lost, Try Again!". Player must press "OK" which will cause a reload and bring player back to "Game Instructions"
+  If player does not complete matches within one minute, an alert window will pop up stating "You Lost, Try Again!". Player must press "OK" which will reset the game board.
 
-  If player succesfully matches all 8 cards under one minute, an alert window will pop up stating "Congrats, You won!". Player must then press "Ok" which will reload game and bring player back to "Game Instructions"
+  If player succesfully matches all 8 cards under one minute, an alert window will pop up stating "Congrats, You won!". Player must then press "Ok" which will reset the game board.
 
 
 

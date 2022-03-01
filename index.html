@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport", initial-scale=1.0>
+    <meta name="viewport" , initial-scale=1.0>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
     <title>Matching Game</title>
 </head>
+
 <body>
     <nav>
-    <div class="nav-wrapper-container">
-      <a href="#!"id="game-title" class="brand-logo">Memory Petting Zoo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a id= "start-btn" class="waves-effect waves-light btn-large">Start Game</a></li>
-        <li><a id= "restart-btn" class="waves-effect waves-light btn-large">&#8634;</a></li>
-        <li><a id= "pause-btn" class="waves-effect waves-light btn-large">Pause Game</a></li>
-        <h2>Timer: <div class="timer"></div></h2>
-   </ul>
-    </div>
-  </nav>  
-        <h1>Matches: <span class="matchesCount"></span></h1>   
-        <section></section>
+        <div class="nav-wrapper-container">
+            <a href="#!" id="game-title" class="brand-logo">Memory Petting Zoo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a id="start-btn" class="waves-effect waves-light btn-large">Start Game</a></li>
+                <li><a id="restart-btn" class="waves-effect waves-light btn-large">&#8634;</a></li>
+                <li><a id="pause-btn" class="waves-effect waves-light btn-large">Pause Game</a></li>
+                <h2>Timer:
+                    <div class="timer"></div>
+                </h2>
+            </ul>
+        </div>
+    </nav>
+    <h1>Matches: <span class="matchesCount"></span></h1>
+    <section></section>
 
-        <p>
-          0
-        </p>
 
-        <div class="popup">
-          <div class="contentBox">
+
+    <div class="popup">
+        <div class="contentBox">
             <div class="close"></div>
             <div class="content">
-              <h3>Game Instructions</h3> 
-              <p>You have 1 minute to complete 8 matches <br>
-                 <br>
-                To start the game, press "Start Game" button.<br>
-                <br>
-                  Feel free to Restart and Pause the game at anytime</p>
+                <h3>Game Instructions</h3>
+                <p>You have 1 minute to complete 8 matches <br>
+                    <br> To start the game, press "Start Game" button.<br>
+                    <br> Feel free to Restart and Pause the game at anytime. Close out of this window to begin.</p>
 
             </div>
-            </div>
-          </div>
-   
- <script src ="js/index.js"></script>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
+
 </html>
