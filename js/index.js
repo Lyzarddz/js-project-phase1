@@ -4,23 +4,22 @@ let cards = [];
 
 
 // On Load pop up instructions
-
 const popUp = document.querySelector('.popup');
 const close = document.querySelector('.close');
 
-window.onload = ()=>{
-        popUp.style.display = "block";
-        
-}
 
 close.addEventListener("click", ()=> {
     popUp.style.display = "none";
 })
 
+//Populates cards and popUp
+document.addEventListener('DOMContentLoaded', ()=> {
+    fetchCards();
+    popUp.style.display = "block";
+})
 
 
 //Starts Game
-
 const startBtn = document.getElementById("start-btn");
 startBtn.addEventListener("click", () => {
     cardGenerator();
@@ -28,7 +27,6 @@ startBtn.addEventListener("click", () => {
 });
 
 //Timer
-
 let second = 0, minute = 0;
 let timer = document.querySelector(".timer");
 let interval;
@@ -42,25 +40,25 @@ const startTimer = () => {
             minute++;
             second = 0;
         }
+        
         //condition for losing
         if (minute === 1 && second === 2){
         alert("You Lost, Try Again!");
-        location.reload();
-            
+        reloadCards();
         }
-    },1000);
+    }, 1000);
 
 }
 
-//To Restart Game
 
-    const resetBtn = document.getElementById("restart-btn");
+//To Restart Game
+ const resetBtn = document.getElementById("restart-btn");
     resetBtn.addEventListener("click", refreshPage);
 
 
     function refreshPage() {
         if (confirm("Are you sure you want to restart the game?")) {
-            location.reload();                                  
+            reloadCards();                      
         }
     }
 
@@ -90,11 +88,10 @@ const fetchCards = ()=> {
     .then(data => {
         cards = data;
     })
+   
 }
 
-document.addEventListener('DOMContentLoaded', ()=> {
-    fetchCards();
-})
+
 
 
 //Need to Randomize cards
@@ -109,7 +106,7 @@ const cardGenerator = () => {
     const cardData = randomize();           //sets card data to randomize
 
     //Creates HTML
-    cardData.forEach((item) => {
+    cardData.forEach(({name, imageSrc}) => { 
       const card = document.createElement("div");
       const face = document.createElement("img");
       const back = document.createElement("div")
@@ -119,8 +116,8 @@ const cardGenerator = () => {
         back.classList = 'back';
 
         //Attaches info to cards
-        face.src = item.imageSrc;       //accessing img property via item
-        card.setAttribute('name', item.name);         //attaches image name
+        face.src = imageSrc;       //accessing img property via item
+        card.setAttribute('name', name);         //attaches image name
 
 
 
@@ -165,11 +162,38 @@ const checkCards = (e) => {
 
         }
     }
+
+    
     // Condition for winning 
         if(toggleCard.length === 16){
             alert("Congrats, You won!");
-            location.reload();
+            reloadCards();
         }
+};
+
+
+
+
+// To reload game
+const reloadCards = () => {
+    let cardData = randomize();
+    let face = document.querySelectorAll(".face");
+    let cards = document.querySelectorAll(".card");
+    
+    cardData.forEach((item, index) => {
+        cards[index].classList.remove('toggleCard');
+
+        cards[index].style.pointerEvents = "all"; 
+        face[index].src = item.imageSrc;
+        cards[index].setAttribute('name', item.name);
+
+    });
+        second = 0
+        minute = 0;
+       
+
+        matches = 0;
+        matchesCount.textContent = matches; 
 };
 
 
