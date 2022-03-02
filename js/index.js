@@ -7,15 +7,18 @@ const popUp = document.querySelector('.popup');
 const close = document.querySelector('.close');
 
 
-close.addEventListener("click", () => {
-    popUp.style.display = "none";
-})
-
-//Populates cards and popUp
+//Populates cards and popUp on load
 document.addEventListener('DOMContentLoaded', () => {
     fetchCards();
     popUp.style.display = "block";
 })
+
+
+//To close window
+close.addEventListener("click", () => {
+    popUp.style.display = "none";
+})
+
 
 
 //Starts Game
@@ -29,10 +32,10 @@ startBtn.addEventListener("click", () => {
 let second = 0,
     minute = 0;
 let timer = document.querySelector(".timer");
-let interval;
+
 
 const startTimer = () => {
-    interval = setInterval(() => {
+    setInterval(() => {
         timer.textContent = minute + "mins " + second + "secs";
         second++;
 
@@ -81,7 +84,7 @@ let matches = 0;
 // Links matches to matchCount 
 matchesCount.textContent = matches;
 
-
+// Fetches data from db.json
 const fetchCards = () => {
     fetch(baseUrl + "/cards")
         .then(resp => resp.json())
@@ -90,9 +93,6 @@ const fetchCards = () => {
         })
 
 }
-
-
-
 
 //Need to Randomize cards
 const randomize = () => {
@@ -106,7 +106,7 @@ const cardGenerator = () => {
     const cardData = randomize(); //sets card data to randomize
 
     //Creates HTML
-    cardData.forEach(({ name, imageSrc }) => { //Destructed
+    cardData.forEach(({ name, imageSrc }) => {
         const card = document.createElement("div");
         const face = document.createElement("img");
         const back = document.createElement("div")
@@ -119,13 +119,12 @@ const cardGenerator = () => {
         face.src = imageSrc; //accessing img property via item
         card.setAttribute('name', name); //attaches image name
 
-
-
         //Attaches cards to section
         section.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
 
+        //Click event to toggle cards
         card.addEventListener('click', (e) => {
             card.classList.toggle("toggleCard");
             checkCards(e);
@@ -170,7 +169,6 @@ const checkCards = (e) => {
         reloadCards();
     }
 };
-
 
 
 
